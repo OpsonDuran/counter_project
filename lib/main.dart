@@ -9,7 +9,9 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Text('hello world') ,
+      home: Center(
+        child:Text('hello world')
+        ) ,
     );
   }
 }
