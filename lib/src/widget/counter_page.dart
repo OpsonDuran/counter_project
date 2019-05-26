@@ -40,35 +40,32 @@ class _CounterPageState extends State<CounterPage> {
         SizedBox(width:25.0 ),
         FloatingActionButton(
         child: Icon(Icons.refresh),
-        onPressed: (){
-          setState(() {
-          _counter=0;
-          });
-        },
-        
+        onPressed:_refresh
       ),
-      Expanded(child: SizedBox(width: 15.0,)),
+      Expanded(child: SizedBox()),
       FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: (){
-          setState(() {
-          _counter ++;
-          });
-        },
-        
+        onPressed:_add,
       ),
       SizedBox(width: 15.0,),
       FloatingActionButton(
         child: Icon(Icons.remove),
-        onPressed: (){
-          setState(() {
-          _counter ++;
-          });
-        },
-        
+        onPressed:_remove,
       ),
       ],
     );
   }
 
+
+  void _add(){
+    setState(()=>_counter++);
+  }
+
+  void _remove(){
+    setState(()=>_counter --);
+  }
+
+  void _refresh(){
+    setState(()=>_counter =0);
+  }
 }
