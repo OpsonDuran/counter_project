@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
 
   final  styleText = TextStyle(fontSize: 25,fontWeight: FontWeight.bold);
+  final counter = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Number of taps',style: styleText),
-            Text('0',style: styleText,),
+            Text('$counter',style: styleText,),
           ],
         ),
       ),
@@ -24,6 +25,7 @@ class HomePage extends StatelessWidget {
         child: Icon(Icons.plus_one),
         onPressed: (){
           print("Hello World");
+          //counter = counter + 1;
         },
         
       ),
