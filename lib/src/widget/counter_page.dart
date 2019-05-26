@@ -37,7 +37,18 @@ class _CounterPageState extends State<CounterPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
+        SizedBox(width:25.0 ),
         FloatingActionButton(
+        child: Icon(Icons.refresh),
+        onPressed: (){
+          setState(() {
+          _counter=0;
+          });
+        },
+        
+      ),
+      Expanded(child: SizedBox(width: 15.0,)),
+      FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: (){
           setState(() {
@@ -51,17 +62,7 @@ class _CounterPageState extends State<CounterPage> {
         child: Icon(Icons.remove),
         onPressed: (){
           setState(() {
-          _counter --;
-          });
-        },
-        
-      ),
-      SizedBox(width: 15.0,),
-      FloatingActionButton(
-        child: Icon(Icons.restore),
-        onPressed: (){
-          setState(() {
-          _counter = 0;
+          _counter ++;
           });
         },
         
